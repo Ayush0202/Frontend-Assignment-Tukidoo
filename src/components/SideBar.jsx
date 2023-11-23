@@ -1,5 +1,4 @@
 import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
 
 // mui icons
 import AssignmentTurnedInOutlinedIcon from "@mui/icons-material/AssignmentTurnedInOutlined";
@@ -9,6 +8,7 @@ import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNone
 import PeopleAltOutlinedIcon from "@mui/icons-material/PeopleAltOutlined";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import SegmentIcon from "@mui/icons-material/Segment";
+import { Button } from "@mui/material";
 
 // list of icons
 const data = [
@@ -26,17 +26,19 @@ function SideBar() {
     <div>
       {data.map((item, index) => (
         <ListItem button key={index}>
-          <ListItemIcon
+          <Button
             style={{
+              color: "gray",
               fontSize: 400,
               display: "flex",
               justifyContent: "center",
               marginBottom: "15px",
               marginLeft: "10px",
             }}
+            onClick={() => alert("Side Menu Button Pressed")}
           >
             {item.icon}
-          </ListItemIcon>
+          </Button>
         </ListItem>
       ))}
     </div>

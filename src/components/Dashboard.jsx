@@ -15,7 +15,7 @@ function Dashboard() {
           <Grid xs={10}>
             <Box style={{ backgroundColor: "white", marginTop: "20px" }}>
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <img src="youtube.jpg" alt="youtube" />
+                <img src="youtube.jpg" alt="youtube" style={{ width: "85%" }} />
               </div>
             </Box>
           </Grid>
