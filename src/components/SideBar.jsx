@@ -1,5 +1,3 @@
-// mui
-import Drawer from "@mui/material/Drawer";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 
@@ -25,7 +23,7 @@ const data = [
 
 function SideBar() {
   const getList = () => (
-    <div style={{ width: 85 }}>
+    <div>
       {data.map((item, index) => (
         <ListItem button key={index}>
           <ListItemIcon
@@ -34,6 +32,7 @@ function SideBar() {
               display: "flex",
               justifyContent: "center",
               marginBottom: "15px",
+              marginLeft: "10px",
             }}
           >
             {item.icon}
@@ -42,23 +41,20 @@ function SideBar() {
       ))}
     </div>
   );
-
   return (
-    <div>
-      <Drawer variant="permanent" anchor={"left"}>
-        <img src="icon.png" alt="main-icon" style={{ marginLeft: "8px" }} />
-        {getList()}
-        <img
-          src="profile-photo.png"
-          alt="profile-photo"
-          style={{
-            width: "75px",
-            marginLeft: "8px",
-            marginTop: "75px",
-          }}
-        />
-      </Drawer>
-    </div>
+    <>
+      <img src="icon.png" alt="main-icon" style={{ marginLeft: "15px" }} />
+      {getList()}
+      <img
+        src="profile-photo.png"
+        alt="profile-photo"
+        style={{
+          width: "75px",
+          marginLeft: "20px",
+          marginTop: "75px",
+        }}
+      />
+    </>
   );
 }
 
