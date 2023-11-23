@@ -19,6 +19,9 @@ export default function MainNavbar() {
             sx={{
               mr: 2,
             }}
+            onClick={() => {
+              alert("Go Back Button");
+            }}
           >
             <ArrowBackIosIcon />
           </Button>
@@ -26,11 +29,23 @@ export default function MainNavbar() {
             Basic Mathematics 101
           </Typography>
           <div>
-            <Button Button color="inherit">
+            <Button
+              Button
+              color="inherit"
+              onClick={() => {
+                alert("Call Teacher Button");
+              }}
+            >
               <img src="call.jpg" alt="call" style={{ marginRight: "5px" }} />
               Call Teacher
             </Button>
-            <Button Button color="inherit">
+            <Button
+              Button
+              color="inherit"
+              onClick={() => {
+                alert("Support Button");
+              }}
+            >
               <img
                 src="support.jpg"
                 alt="call"
